@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Employee" representedClassName=".Employee" syncable="YES">
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="imageData" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <relationship name="shifts" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="employee" inverseEntity="Shift" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="latitude" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="shifts" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="location" inverseEntity="Shift" syncable="YES"/>
+    </entity>
+    <entity name="Position" representedClassName=".Position" syncable="YES">
+        <attribute name="color" attributeType="Transformable" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="shifts" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="position" inverseEntity="Shift" syncable="YES"/>
+    </entity>
+    <entity name="Shift" representedClassName=".Shift" syncable="YES">
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="employee" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="shifts" inverseEntity="Employee" syncable="YES"/>
+        <relationship name="location" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="shifts" inverseEntity="Location" syncable="YES"/>
+        <relationship name="position" maxCount="1" deletionRule="Nullify" destinationEntity="Position" inverseName="shifts" inverseEntity="Position" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="-38" positionY="-276" width="128" height="103"/>
+        <element name="Location" positionX="144" positionY="-126" width="128" height="103"/>
+        <element name="Position" positionX="360" positionY="-261" width="128" height="88"/>
+        <element name="Shift" positionX="162" positionY="-297" width="128" height="133"/>
+    </elements>
+</model>
