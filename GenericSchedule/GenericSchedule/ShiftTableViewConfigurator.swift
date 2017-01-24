@@ -26,5 +26,7 @@ final class ShiftTableViewConfigurator: TableViewConfigurator {
     guard let shiftCell = cell as? ShiftTableViewCell, let shift = with as? Shift else { return }
 
     shiftCell.nameLabel.text = shift.employee.fullName
+    shiftCell.positionView.backgroundColor = shift.position.color
+    shiftCell.startLabel.text = shift.start.description
   }
 }
