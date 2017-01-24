@@ -17,7 +17,43 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="321" height="72.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fY-iG-Edg">
+                        <rect key="frame" x="8" y="26" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-u3-0E6" userLabel="positionView">
+                        <rect key="frame" x="0.0" y="69.5" width="321" height="3"/>
+                        <color key="backgroundColor" red="0.3294117647" green="0.63529411759999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="9lD-AX-mfg"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3h-La-ir6">
+                        <rect key="frame" x="276" y="28" width="37" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hgT-u3-0E6" secondAttribute="trailing" id="38i-zm-59i"/>
+                    <constraint firstItem="O3h-La-ir6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ImZ-9D-5vr"/>
+                    <constraint firstAttribute="bottom" secondItem="hgT-u3-0E6" secondAttribute="bottom" id="JGW-qr-KPe"/>
+                    <constraint firstItem="O3h-La-ir6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7fY-iG-Edg" secondAttribute="trailing" constant="8" id="Y2j-9M-wCl"/>
+                    <constraint firstItem="hgT-u3-0E6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="afV-2E-lle"/>
+                    <constraint firstItem="7fY-iG-Edg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cQe-3b-llo"/>
+                    <constraint firstItem="7fY-iG-Edg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="eNg-v8-sBr"/>
+                    <constraint firstAttribute="trailing" secondItem="O3h-La-ir6" secondAttribute="trailing" constant="8" id="qg7-nw-ygK"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="7fY-iG-Edg" id="NLS-GB-m82"/>
+                <outlet property="positionView" destination="hgT-u3-0E6" id="d6y-NB-GA9"/>
+                <outlet property="startLabel" destination="O3h-La-ir6" id="oB0-dq-Pvy"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="66.5"/>
         </tableViewCell>
     </objects>

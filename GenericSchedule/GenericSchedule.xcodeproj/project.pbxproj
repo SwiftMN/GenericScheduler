@@ -29,6 +29,11 @@
 		437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557831E36B00C0002FDB6 /* Location+Extension.swift */; };
 		437557861E36B0400002FDB6 /* Position+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557851E36B0400002FDB6 /* Position+Extension.swift */; };
 		437557881E36B0AC0002FDB6 /* Shift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557871E36B0AC0002FDB6 /* Shift+Extension.swift */; };
+		43B81A041E36F5DA009AAB01 /* FetchedResultsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A031E36F5DA009AAB01 /* FetchedResultsDataProvider.swift */; };
+		43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A051E36F61B009AAB01 /* ItemProviderProtocol.swift */; };
+		43B81A081E36F9EC009AAB01 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A071E36F9EC009AAB01 /* TableViewDataSource.swift */; };
+		43B81A0A1E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A091E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift */; };
+		43B81A0D1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A0C1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		437557831E36B00C0002FDB6 /* Location+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+Extension.swift"; sourceTree = "<group>"; };
 		437557851E36B0400002FDB6 /* Position+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Position+Extension.swift"; sourceTree = "<group>"; };
 		437557871E36B0AC0002FDB6 /* Shift+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shift+Extension.swift"; sourceTree = "<group>"; };
+		43B81A031E36F5DA009AAB01 /* FetchedResultsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsDataProvider.swift; sourceTree = "<group>"; };
+		43B81A051E36F61B009AAB01 /* ItemProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemProviderProtocol.swift; sourceTree = "<group>"; };
+		43B81A071E36F9EC009AAB01 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		43B81A091E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		43B81A0C1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTableViewConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 		437556FF1E36714D0002FDB6 /* GenericSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				43B81A0B1E36FAB3009AAB01 /* TableViewConfiguration */,
 				431176B41E36B82A0044069A /* Importer */,
 				4375575E1E368E950002FDB6 /* DataSources */,
 				4375575D1E368D870002FDB6 /* ViewControllers */,
@@ -152,6 +163,8 @@
 				4375577F1E36AD580002FDB6 /* MangedObjectProtocol.swift */,
 				431176B71E36B8710044069A /* ManagedObjectContextFetchable.swift */,
 				431176B91E36BB630044069A /* RepositoryProtocol.swift */,
+				43B81A051E36F61B009AAB01 /* ItemProviderProtocol.swift */,
+				43B81A091E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -183,8 +196,18 @@
 		4375575E1E368E950002FDB6 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				43B81A031E36F5DA009AAB01 /* FetchedResultsDataProvider.swift */,
+				43B81A071E36F9EC009AAB01 /* TableViewDataSource.swift */,
 			);
 			name = DataSources;
+			sourceTree = "<group>";
+		};
+		43B81A0B1E36FAB3009AAB01 /* TableViewConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				43B81A0C1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift */,
+			);
+			name = TableViewConfiguration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,16 +286,21 @@
 			files = (
 				4375577D1E36ACC90002FDB6 /* ShiftTableViewCell.swift in Sources */,
 				431176BA1E36BB630044069A /* RepositoryProtocol.swift in Sources */,
+				43B81A0A1E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift in Sources */,
 				437557601E369F2C0002FDB6 /* ScheduleTableViewController.swift in Sources */,
 				437557741E36A33E0002FDB6 /* Employee.swift in Sources */,
 				437557821E36AE540002FDB6 /* Employee+Extension.swift in Sources */,
 				437557011E36714D0002FDB6 /* AppDelegate.swift in Sources */,
 				431176B61E36B83D0044069A /* Importer.swift in Sources */,
+				43B81A041E36F5DA009AAB01 /* FetchedResultsDataProvider.swift in Sources */,
 				437557181E3674E40002FDB6 /* Scheduler.xcdatamodeld in Sources */,
 				437557861E36B0400002FDB6 /* Position+Extension.swift in Sources */,
+				43B81A0D1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift in Sources */,
 				431176B81E36B8710044069A /* ManagedObjectContextFetchable.swift in Sources */,
 				431176BC1E36BC0E0044069A /* Repository.swift in Sources */,
+				43B81A081E36F9EC009AAB01 /* TableViewDataSource.swift in Sources */,
 				437557881E36B0AC0002FDB6 /* Shift+Extension.swift in Sources */,
+				43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */,
 				437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */,
 				4375577A1E36A3830002FDB6 /* Shift.swift in Sources */,
 				437557151E3673B00002FDB6 /* CoreDataStack.swift in Sources */,

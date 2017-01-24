@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +21,23 @@
                     <view key="view" contentMode="scaleToFill" id="Qly-C6-KNa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-Wx-3WG">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="leading" secondItem="Qly-C6-KNa" secondAttribute="leadingMargin" id="Ou3-lj-7A4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uX4-Wx-3WG" secondAttribute="trailing" id="RhX-M0-2xF"/>
+                            <constraint firstItem="4xI-bR-ZKO" firstAttribute="top" secondItem="uX4-Wx-3WG" secondAttribute="bottom" id="qbc-Kc-hQX"/>
+                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="top" secondItem="f4I-Hl-2rq" secondAttribute="bottom" id="rCT-kV-hJc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="uX4-Wx-3WG" id="5MB-cP-u0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd9-5U-DXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

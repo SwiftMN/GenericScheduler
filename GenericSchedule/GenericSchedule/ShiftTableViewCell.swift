@@ -10,4 +10,7 @@ import UIKit
 
 class ShiftTableViewCell: UITableViewCell {
     
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var positionView: UIView!
+  @IBOutlet weak var startLabel: UILabel!
 }
