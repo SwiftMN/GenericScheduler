@@ -11,6 +11,7 @@
 		431176B81E36B8710044069A /* ManagedObjectContextFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431176B71E36B8710044069A /* ManagedObjectContextFetchable.swift */; };
 		431176BA1E36BB630044069A /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431176B91E36BB630044069A /* RepositoryProtocol.swift */; };
 		431176BC1E36BC0E0044069A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431176BB1E36BC0E0044069A /* Repository.swift */; };
+		432F74011E3855D8006AB740 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74001E3855D8006AB740 /* Constants.swift */; };
 		437557011E36714D0002FDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557001E36714D0002FDB6 /* AppDelegate.swift */; };
 		437557061E36714D0002FDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437557041E36714D0002FDB6 /* Main.storyboard */; };
 		437557081E36714D0002FDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437557071E36714D0002FDB6 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		431176B71E36B8710044069A /* ManagedObjectContextFetchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextFetchable.swift; sourceTree = "<group>"; };
 		431176B91E36BB630044069A /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		431176BB1E36BC0E0044069A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		432F74001E3855D8006AB740 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		437556FD1E36714D0002FDB6 /* GenericSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437557001E36714D0002FDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437557051E36714D0002FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			name = Importer;
 			sourceTree = "<group>";
 		};
+		432F73FF1E3855CC006AB740 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				432F74001E3855D8006AB740 /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		437556F41E36714D0002FDB6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		437556FF1E36714D0002FDB6 /* GenericSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				432F73FF1E3855CC006AB740 /* Constants */,
 				43B81A0B1E36FAB3009AAB01 /* TableViewConfiguration */,
 				431176B41E36B82A0044069A /* Importer */,
 				4375575E1E368E950002FDB6 /* DataSources */,
@@ -307,6 +318,7 @@
 				437557781E36A36A0002FDB6 /* Position.swift in Sources */,
 				437557761E36A35C0002FDB6 /* Location.swift in Sources */,
 				437557801E36AD580002FDB6 /* MangedObjectProtocol.swift in Sources */,
+				432F74011E3855D8006AB740 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

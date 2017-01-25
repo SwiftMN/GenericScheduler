@@ -1,15 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5TS-MT-iQe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="djw-CS-VqY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="vxf-wA-Hc5">
+            <objects>
+                <viewController id="djw-CS-VqY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VTp-Ff-7m5"/>
+                        <viewControllerLayoutGuide type="bottom" id="jkW-YS-sxB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tiP-RD-5n5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lca-YS-GkN" userLabel="ToolBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-2L-Ktz">
+                                        <rect key="frame" x="60" y="35" width="255" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="0.22352941176470587" green="0.26666666666666666" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qL9-2L-Ktz" secondAttribute="trailing" constant="60" id="JqY-Em-Pdy"/>
+                                    <constraint firstItem="qL9-2L-Ktz" firstAttribute="leading" secondItem="lca-YS-GkN" secondAttribute="leading" constant="60" id="LcD-cZ-0UM"/>
+                                    <constraint firstAttribute="height" constant="64" id="MAi-sy-zJ3"/>
+                                    <constraint firstAttribute="bottom" secondItem="qL9-2L-Ktz" secondAttribute="bottom" constant="8" id="XhI-Su-gNJ"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-aL-0qU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="5TS-MT-iQe" kind="embed" id="b5P-zX-sZG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lca-YS-GkN" firstAttribute="top" secondItem="tiP-RD-5n5" secondAttribute="top" id="Fm9-Pl-TeD"/>
+                            <constraint firstAttribute="trailing" secondItem="iCT-aL-0qU" secondAttribute="trailing" id="Hfk-SA-SGP"/>
+                            <constraint firstItem="lca-YS-GkN" firstAttribute="leading" secondItem="tiP-RD-5n5" secondAttribute="leading" id="T7l-SV-EFf"/>
+                            <constraint firstAttribute="trailing" secondItem="lca-YS-GkN" secondAttribute="trailing" id="lbZ-Dl-Kdi"/>
+                            <constraint firstItem="jkW-YS-sxB" firstAttribute="top" secondItem="iCT-aL-0qU" secondAttribute="bottom" id="oHI-bF-45S"/>
+                            <constraint firstItem="iCT-aL-0qU" firstAttribute="top" secondItem="lca-YS-GkN" secondAttribute="bottom" id="rnr-MD-u2J"/>
+                            <constraint firstItem="iCT-aL-0qU" firstAttribute="leading" secondItem="tiP-RD-5n5" secondAttribute="leading" id="vtq-ZP-WOa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daS-4b-Id7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-979" y="-189"/>
+        </scene>
         <!--Schedule Table View Controller-->
         <scene sceneID="mSD-IV-7G0">
             <objects>
@@ -19,20 +71,20 @@
                         <viewControllerLayoutGuide type="bottom" id="4xI-bR-ZKO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qly-C6-KNa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-Wx-3WG">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="leading" secondItem="Qly-C6-KNa" secondAttribute="leadingMargin" id="Ou3-lj-7A4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uX4-Wx-3WG" secondAttribute="trailing" id="RhX-M0-2xF"/>
-                            <constraint firstItem="4xI-bR-ZKO" firstAttribute="top" secondItem="uX4-Wx-3WG" secondAttribute="bottom" id="qbc-Kc-hQX"/>
-                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="top" secondItem="f4I-Hl-2rq" secondAttribute="bottom" id="rCT-kV-hJc"/>
+                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="top" secondItem="f4I-Hl-2rq" secondAttribute="bottom" id="467-qR-5Kx"/>
+                            <constraint firstItem="4xI-bR-ZKO" firstAttribute="top" secondItem="uX4-Wx-3WG" secondAttribute="bottom" id="AuS-ma-8Wo"/>
+                            <constraint firstAttribute="trailing" secondItem="uX4-Wx-3WG" secondAttribute="trailing" id="d7A-dy-315"/>
+                            <constraint firstItem="uX4-Wx-3WG" firstAttribute="leading" secondItem="Qly-C6-KNa" secondAttribute="leading" id="vyG-1d-5jb"/>
                         </constraints>
                     </view>
                     <connections>

@@ -215,6 +215,18 @@ class Importer: ManagedObjectContextFetchable {
     shift7.start = now.addingTimeInterval(minute * 25)
     shift7.end = now.addingTimeInterval(hour * 7)
 
+    let shift8 = shiftRepository.new()
+    shift8.start = now.addingTimeInterval(minute * 1)
+    shift8.end = now.addingTimeInterval(hour * 7)
+
+    let shift9 = shiftRepository.new()
+    shift9.start = now.addingTimeInterval(hour * 2)
+    shift9.end = now.addingTimeInterval(hour * 5)
+
+    let shift10 = shiftRepository.new()
+    shift10.start = now.addingTimeInterval(hour * 3)
+    shift10.end = now.addingTimeInterval(hour * 9)
+
     //MARK: Relationships
 
     let shifts = Set<Shift>([shift1, shift2, shift3, shift4, shift5, shift6, shift7])
@@ -253,6 +265,18 @@ class Importer: ManagedObjectContextFetchable {
     shift7.employee = kevin
     shift7.location = fitzgerald
     shift7.position = receptionist
+
+    shift8.employee = peter
+    shift8.location = punch
+    shift8.position = parapsychologist
+
+    shift9.employee = ray
+    shift9.location = firstAve
+    shift9.position = mechanic
+
+    shift10.employee = jillian
+    shift10.location = wheniwork
+    shift10.position = labRat
 
     _ = positionRepository.save()
     _ = shiftRepository.save()
