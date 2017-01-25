@@ -14,4 +14,10 @@ enum DateFormatters {
     formatter.dateFormat = "MMM d, h:mm a"
     return formatter
   }()
+
+  static var startOnDate: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "h a, d MMM"
+    return formatter
+  }()
 }

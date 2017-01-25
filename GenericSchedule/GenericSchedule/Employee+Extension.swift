@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import UIKit
 
 extension Employee: ManagedObject {
   static var defaultSortDescriptors: [NSSortDescriptor] {
@@ -28,5 +29,17 @@ extension Employee: ManagedObject {
 
   var fullName: String {
     return "\(firstName) \(lastName)"
+  }
+
+  var initials: String {
+    let firstIndex =  firstName.index(firstName.startIndex, offsetBy: 1)
+    let firstInitial = firstName.substring(to: firstIndex).uppercased()
+    let secondIndex =  lastName.index(lastName.startIndex, offsetBy: 1)
+    let secondInitial = lastName.substring(to: secondIndex).uppercased()
+    return "\(firstInitial).\(secondInitial)"
+  }
+
+  var employeeImage: UIImage? {
+    return UIImage(data: imageData)
   }
 }

@@ -12,6 +12,9 @@
 		431176BA1E36BB630044069A /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431176B91E36BB630044069A /* RepositoryProtocol.swift */; };
 		431176BC1E36BC0E0044069A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431176BB1E36BC0E0044069A /* Repository.swift */; };
 		432F74011E3855D8006AB740 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74001E3855D8006AB740 /* Constants.swift */; };
+		432F74041E39059E006AB740 /* ShiftTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */; };
+		432F74051E39059E006AB740 /* ShiftTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */; };
+		432F74071E391368006AB740 /* ShiftTwoTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */; };
 		437557011E36714D0002FDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557001E36714D0002FDB6 /* AppDelegate.swift */; };
 		437557061E36714D0002FDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437557041E36714D0002FDB6 /* Main.storyboard */; };
 		437557081E36714D0002FDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437557071E36714D0002FDB6 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		431176B91E36BB630044069A /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		431176BB1E36BC0E0044069A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		432F74001E3855D8006AB740 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTwoTableViewCell.swift; sourceTree = "<group>"; };
+		432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiftTwoTableViewCell.xib; sourceTree = "<group>"; };
+		432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTwoTableViewConfigurator.swift; sourceTree = "<group>"; };
 		437556FD1E36714D0002FDB6 /* GenericSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437557001E36714D0002FDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437557051E36714D0002FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 			children = (
 				4375577B1E36ACC90002FDB6 /* ShiftTableViewCell.swift */,
 				4375577C1E36ACC90002FDB6 /* ShiftTableViewCell.xib */,
+				432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */,
+				432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				43B81A0C1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift */,
+				432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */,
 			);
 			name = TableViewConfiguration;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 			files = (
 				4375577E1E36ACC90002FDB6 /* ShiftTableViewCell.xib in Resources */,
 				4375570B1E36714D0002FDB6 /* LaunchScreen.storyboard in Resources */,
+				432F74051E39059E006AB740 /* ShiftTwoTableViewCell.xib in Resources */,
 				437557081E36714D0002FDB6 /* Assets.xcassets in Resources */,
 				437557061E36714D0002FDB6 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +309,7 @@
 				431176BA1E36BB630044069A /* RepositoryProtocol.swift in Sources */,
 				43B81A0A1E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift in Sources */,
 				437557601E369F2C0002FDB6 /* ScheduleTableViewController.swift in Sources */,
+				432F74041E39059E006AB740 /* ShiftTwoTableViewCell.swift in Sources */,
 				437557741E36A33E0002FDB6 /* Employee.swift in Sources */,
 				437557821E36AE540002FDB6 /* Employee+Extension.swift in Sources */,
 				437557011E36714D0002FDB6 /* AppDelegate.swift in Sources */,
@@ -314,6 +325,7 @@
 				43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */,
 				437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */,
 				4375577A1E36A3830002FDB6 /* Shift.swift in Sources */,
+				432F74071E391368006AB740 /* ShiftTwoTableViewConfigurator.swift in Sources */,
 				437557151E3673B00002FDB6 /* CoreDataStack.swift in Sources */,
 				437557781E36A36A0002FDB6 /* Position.swift in Sources */,
 				437557761E36A35C0002FDB6 /* Location.swift in Sources */,
