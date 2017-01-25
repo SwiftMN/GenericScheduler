@@ -9,19 +9,20 @@
 import CoreData
 import UIKit
 
-class Importer: ManagedObjectContextFetchable {
+class Importer {
 
-  var managedObjectContext: NSManagedObjectContext
+  private var persistentContainer: NSPersistentContainer
 
-  required init(context: NSManagedObjectContext) {
-    managedObjectContext = context
+  init(container: NSPersistentContainer) {
+    persistentContainer = container
   }
 
   func load() {
-    let positionRepository = Repository<Position>(context: managedObjectContext)
-    let shiftRepository = Repository<Shift>(context: managedObjectContext)
-    let employeeRepository = Repository<Employee>(context: managedObjectContext)
-    let locationRepository = Repository<Location>(context: managedObjectContext)
+    let backgroundContext = persistentContainer.newBackgroundContext()
+    let positionRepository = Repository<Position>(context: backgroundContext)
+    let shiftRepository = Repository<Shift>(context: backgroundContext)
+    let employeeRepository = Repository<Employee>(context: backgroundContext)
+    let locationRepository = Repository<Location>(context: backgroundContext)
 
     //MARK: Positions
 

@@ -12,7 +12,7 @@ class CoreDataStack: NSObject {
 
   private let modelName: String
 
-  private lazy var persistentContainer: NSPersistentContainer = {
+  lazy var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: self.modelName)
     container.loadPersistentStores { description, error in
       if let error = error as NSError? {

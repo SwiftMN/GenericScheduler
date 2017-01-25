@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
     if !UserDefaults.standard.bool(forKey: "CoreDataImported") {
-      let importer = Importer(context: CoreDataStack.stack.mainManagedObjectContext)
+      let importer = Importer(container: CoreDataStack.stack.persistentContainer)
       importer.load()
       UserDefaults.standard.set(true, forKey: "CoreDataImported")
     }
