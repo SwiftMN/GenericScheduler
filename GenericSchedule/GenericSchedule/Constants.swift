@@ -20,4 +20,10 @@ enum DateFormatters {
     formatter.dateFormat = "h a, d MMM"
     return formatter
   }()
+
+  static var simplerDate: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MM.dd.yy"
+    return formatter
+  }()
 }

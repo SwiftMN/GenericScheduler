@@ -7,8 +7,9 @@
 //
 
 import CoreData
+import MapKit
 
-extension Location: ManagedObject {
+extension Location: ManagedObject, MKAnnotation {
   static var defaultSortDescriptors: [NSSortDescriptor] {
     let sort = NSSortDescriptor(key: #keyPath(Location.name), ascending: false)
     return [sort]
@@ -23,5 +24,13 @@ extension Location: ManagedObject {
 
   static var entityName: String {
     return "Location"
+  }
+
+  var coordinate: CLLocationCoordinate2D {
+    return CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+  }
+
+  var cacheKey: NSString  {
+    return NSString(string: "\(latitude),\(longitude)")
   }
 }

@@ -15,6 +15,9 @@
 		432F74041E39059E006AB740 /* ShiftTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */; };
 		432F74051E39059E006AB740 /* ShiftTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */; };
 		432F74071E391368006AB740 /* ShiftTwoTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */; };
+		432F740A1E3996D2006AB740 /* ShiftThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F74081E3996D2006AB740 /* ShiftThreeTableViewCell.swift */; };
+		432F740B1E3996D2006AB740 /* ShiftThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432F74091E3996D2006AB740 /* ShiftThreeTableViewCell.xib */; };
+		432F740D1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F740C1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift */; };
 		437557011E36714D0002FDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557001E36714D0002FDB6 /* AppDelegate.swift */; };
 		437557061E36714D0002FDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437557041E36714D0002FDB6 /* Main.storyboard */; };
 		437557081E36714D0002FDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437557071E36714D0002FDB6 /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTwoTableViewCell.swift; sourceTree = "<group>"; };
 		432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiftTwoTableViewCell.xib; sourceTree = "<group>"; };
 		432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftTwoTableViewConfigurator.swift; sourceTree = "<group>"; };
+		432F74081E3996D2006AB740 /* ShiftThreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftThreeTableViewCell.swift; sourceTree = "<group>"; };
+		432F74091E3996D2006AB740 /* ShiftThreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiftThreeTableViewCell.xib; sourceTree = "<group>"; };
+		432F740C1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftThreeTableViewConfigurator.swift; sourceTree = "<group>"; };
 		437556FD1E36714D0002FDB6 /* GenericSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437557001E36714D0002FDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437557051E36714D0002FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 				4375577C1E36ACC90002FDB6 /* ShiftTableViewCell.xib */,
 				432F74021E39059E006AB740 /* ShiftTwoTableViewCell.swift */,
 				432F74031E39059E006AB740 /* ShiftTwoTableViewCell.xib */,
+				432F74081E3996D2006AB740 /* ShiftThreeTableViewCell.swift */,
+				432F74091E3996D2006AB740 /* ShiftThreeTableViewCell.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 			children = (
 				43B81A0C1E36FAC8009AAB01 /* ShiftTableViewConfigurator.swift */,
 				432F74061E391368006AB740 /* ShiftTwoTableViewConfigurator.swift */,
+				432F740C1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift */,
 			);
 			name = TableViewConfiguration;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 				432F74051E39059E006AB740 /* ShiftTwoTableViewCell.xib in Resources */,
 				437557081E36714D0002FDB6 /* Assets.xcassets in Resources */,
 				437557061E36714D0002FDB6 /* Main.storyboard in Resources */,
+				432F740B1E3996D2006AB740 /* ShiftThreeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +335,11 @@
 				43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */,
 				437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */,
 				4375577A1E36A3830002FDB6 /* Shift.swift in Sources */,
+				432F740A1E3996D2006AB740 /* ShiftThreeTableViewCell.swift in Sources */,
 				432F74071E391368006AB740 /* ShiftTwoTableViewConfigurator.swift in Sources */,
 				437557151E3673B00002FDB6 /* CoreDataStack.swift in Sources */,
 				437557781E36A36A0002FDB6 /* Position.swift in Sources */,
+				432F740D1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift in Sources */,
 				437557761E36A35C0002FDB6 /* Location.swift in Sources */,
 				437557801E36AD580002FDB6 /* MangedObjectProtocol.swift in Sources */,
 				432F74011E3855D8006AB740 /* Constants.swift in Sources */,
