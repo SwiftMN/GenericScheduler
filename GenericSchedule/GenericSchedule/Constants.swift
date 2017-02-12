@@ -26,4 +26,10 @@ enum DateFormatters {
     formatter.dateFormat = "MM.dd.yy"
     return formatter
   }()
+
+  static var hoursDate: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "h:mm a"
+    return formatter
+  }()
 }

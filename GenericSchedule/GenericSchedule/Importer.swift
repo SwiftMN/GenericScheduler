@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-class Importer {
+final class Importer {
 
   private var persistentContainer: NSPersistentContainer
 

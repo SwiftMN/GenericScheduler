@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 protocol TableViewConfigurator {
   var cellIdentifier: String { get }

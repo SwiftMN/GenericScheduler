@@ -13,27 +13,30 @@ final class TableViewDataSource<T: NSFetchRequestResult>: NSObject, UITableViewD
 
   private var dataProvider: FetchedResultsDataProvider<T>!
   private var tableView: UITableView!
-  private var tableViewConfigurator: TableViewConfigurator!
+  private var configurator: TableViewConfigurator!
 
   init(tableView: UITableView, dataProvider: FetchedResultsDataProvider<T>, configurator: TableViewConfigurator) {
     super.init()
     self.tableView = tableView
     self.tableView.dataSource = self
     self.dataProvider = dataProvider
-    self.tableViewConfigurator = configurator
+    self.configurator = configurator
   }
 
   //MARK: UITableViewDataSource
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let identifier = tableViewConfigurator.cellIdentifier
-    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: configurator.cellIdentifier, for: indexPath)
     let object = dataProvider.object(at: indexPath)
-    tableViewConfigurator.configure(cell: cell, with: object)
+    configurator.configure(cell: cell, with: object)
     return cell
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dataProvider.numberOfItems(section: section)
+  }
+
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return dataProvider.sections()
   }
 
   //MARK: Public
