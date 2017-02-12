@@ -18,13 +18,15 @@ final class ScheduleTableViewController: UIViewController, ItemProviderDelegate 
     super.viewDidLoad()
 
     // First Configuration
-    //let configurator = ShiftTableViewConfigurator(tableView: tableView)
+    let configurator = ShiftTableViewConfigurator(tableView: tableView)
 
     // Second Configuration
     //let configurator = ShiftTwoTableViewConfigurator(tableView: tableView)
 
     // Third Configuration
-    let configurator = ShiftThreeTableViewConfigurator(tableView: tableView)
+    //let configurator = ShiftThreeTableViewConfigurator(tableView: tableView)
+
+    // Same for all Configurations
     let dataProvider = FetchedResultsDataProvider<Shift>(fetchRequest: Shift.defaultFetchRequest, managedObjectContext: CoreDataStack.stack.mainManagedObjectContext, delegate: self)
     dataSource = TableViewDataSource<Shift>(tableView: tableView, dataProvider: dataProvider, configurator: configurator)
   }
