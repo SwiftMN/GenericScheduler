@@ -5,6 +5,7 @@ import UIKit
 import PlaygroundSupport
 
 final class MovieCell: UITableViewCell {
+
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
   }

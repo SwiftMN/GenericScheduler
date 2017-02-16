@@ -42,6 +42,11 @@
 		437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557831E36B00C0002FDB6 /* Location+Extension.swift */; };
 		437557861E36B0400002FDB6 /* Position+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557851E36B0400002FDB6 /* Position+Extension.swift */; };
 		437557881E36B0AC0002FDB6 /* Shift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437557871E36B0AC0002FDB6 /* Shift+Extension.swift */; };
+		438AEA751E5610410094126E /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEA741E5610410094126E /* Keyboard.swift */; };
+		438AEA771E56117E0094126E /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEA761E56117E0094126E /* NotificationHandler.swift */; };
+		438AEA791E56137D0094126E /* NSNotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEA781E56137D0094126E /* NSNotificationCenter+Extension.swift */; };
+		438AEA7B1E56139C0094126E /* NotificationSpectator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEA7A1E56139C0094126E /* NotificationSpectator.swift */; };
+		438AEA7D1E5622010094126E /* NotificationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEA7C1E5622010094126E /* NotificationExampleViewController.swift */; };
 		43B81A041E36F5DA009AAB01 /* FetchedResultsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A031E36F5DA009AAB01 /* FetchedResultsDataProvider.swift */; };
 		43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A051E36F61B009AAB01 /* ItemProviderProtocol.swift */; };
 		43B81A081E36F9EC009AAB01 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B81A071E36F9EC009AAB01 /* TableViewDataSource.swift */; };
@@ -87,6 +92,11 @@
 		437557831E36B00C0002FDB6 /* Location+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+Extension.swift"; sourceTree = "<group>"; };
 		437557851E36B0400002FDB6 /* Position+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Position+Extension.swift"; sourceTree = "<group>"; };
 		437557871E36B0AC0002FDB6 /* Shift+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shift+Extension.swift"; sourceTree = "<group>"; };
+		438AEA741E5610410094126E /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		438AEA761E56117E0094126E /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		438AEA781E56137D0094126E /* NSNotificationCenter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		438AEA7A1E56139C0094126E /* NotificationSpectator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSpectator.swift; sourceTree = "<group>"; };
+		438AEA7C1E5622010094126E /* NotificationExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExampleViewController.swift; sourceTree = "<group>"; };
 		43B81A031E36F5DA009AAB01 /* FetchedResultsDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsDataProvider.swift; sourceTree = "<group>"; };
 		43B81A051E36F61B009AAB01 /* ItemProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemProviderProtocol.swift; sourceTree = "<group>"; };
 		43B81A071E36F9EC009AAB01 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
@@ -149,6 +159,7 @@
 		437556FF1E36714D0002FDB6 /* GenericSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				438AEA731E560F420094126E /* Notifications */,
 				432F73FF1E3855CC006AB740 /* Constants */,
 				432F74141E3BA345006AB740 /* CollectionViewConfiguration */,
 				43B81A0B1E36FAB3009AAB01 /* TableViewConfiguration */,
@@ -241,6 +252,7 @@
 			children = (
 				4375575F1E369F2C0002FDB6 /* ScheduleTableViewController.swift */,
 				432F74191E3BCC75006AB740 /* ScheduleCollectionViewController.swift */,
+				438AEA7C1E5622010094126E /* NotificationExampleViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -253,6 +265,17 @@
 				432F74121E3B9608006AB740 /* CollectionViewDataSource.swift */,
 			);
 			name = DataSources;
+			sourceTree = "<group>";
+		};
+		438AEA731E560F420094126E /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				438AEA741E5610410094126E /* Keyboard.swift */,
+				438AEA761E56117E0094126E /* NotificationHandler.swift */,
+				438AEA781E56137D0094126E /* NSNotificationCenter+Extension.swift */,
+				438AEA7A1E56139C0094126E /* NotificationSpectator.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		43B81A0B1E36FAB3009AAB01 /* TableViewConfiguration */ = {
@@ -344,6 +367,7 @@
 			files = (
 				4375577D1E36ACC90002FDB6 /* ShiftTableViewCell.swift in Sources */,
 				431176BA1E36BB630044069A /* RepositoryProtocol.swift in Sources */,
+				438AEA771E56117E0094126E /* NotificationHandler.swift in Sources */,
 				43B81A0A1E36FA55009AAB01 /* TableViewConfiguratorProtocol.swift in Sources */,
 				437557601E369F2C0002FDB6 /* ScheduleTableViewController.swift in Sources */,
 				432F741A1E3BCC75006AB740 /* ScheduleCollectionViewController.swift in Sources */,
@@ -361,6 +385,7 @@
 				432F74181E3BA3F0006AB740 /* CollectionViewConfiguratorProtocol.swift in Sources */,
 				43B81A081E36F9EC009AAB01 /* TableViewDataSource.swift in Sources */,
 				437557881E36B0AC0002FDB6 /* Shift+Extension.swift in Sources */,
+				438AEA7D1E5622010094126E /* NotificationExampleViewController.swift in Sources */,
 				432F74161E3BA35B006AB740 /* ShiftCollectionViewConfigurator.swift in Sources */,
 				43B81A061E36F61B009AAB01 /* ItemProviderProtocol.swift in Sources */,
 				437557841E36B00C0002FDB6 /* Location+Extension.swift in Sources */,
@@ -369,9 +394,12 @@
 				432F74071E391368006AB740 /* ShiftTwoTableViewConfigurator.swift in Sources */,
 				437557151E3673B00002FDB6 /* CoreDataStack.swift in Sources */,
 				437557781E36A36A0002FDB6 /* Position.swift in Sources */,
+				438AEA791E56137D0094126E /* NSNotificationCenter+Extension.swift in Sources */,
 				432F740D1E39988A006AB740 /* ShiftThreeTableViewConfigurator.swift in Sources */,
 				432F74131E3B9608006AB740 /* CollectionViewDataSource.swift in Sources */,
 				437557761E36A35C0002FDB6 /* Location.swift in Sources */,
+				438AEA751E5610410094126E /* Keyboard.swift in Sources */,
+				438AEA7B1E56139C0094126E /* NotificationSpectator.swift in Sources */,
 				437557801E36AD580002FDB6 /* MangedObjectProtocol.swift in Sources */,
 				432F74011E3855D8006AB740 /* Constants.swift in Sources */,
 				432F74101E3AE0E9006AB740 /* ShiftCollectionViewCell.swift in Sources */,

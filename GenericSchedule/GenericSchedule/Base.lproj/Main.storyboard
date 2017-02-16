@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,13 +31,21 @@
                                         <color key="textColor" red="0.22352941176470587" green="0.26666666666666666" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-FI-rcO">
+                                        <rect key="frame" x="335" y="34" width="22" height="22"/>
+                                        <connections>
+                                            <segue destination="dI0-Xk-12o" kind="show" id="NTO-l4-ghi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uEc-FI-rcO" secondAttribute="trailing" constant="18" id="7SB-mg-s1x"/>
                                     <constraint firstAttribute="trailing" secondItem="qL9-2L-Ktz" secondAttribute="trailing" constant="60" id="JqY-Em-Pdy"/>
                                     <constraint firstItem="qL9-2L-Ktz" firstAttribute="leading" secondItem="lca-YS-GkN" secondAttribute="leading" constant="60" id="LcD-cZ-0UM"/>
                                     <constraint firstAttribute="height" constant="64" id="MAi-sy-zJ3"/>
                                     <constraint firstAttribute="bottom" secondItem="qL9-2L-Ktz" secondAttribute="bottom" constant="8" id="XhI-Su-gNJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="uEc-FI-rcO" secondAttribute="bottom" constant="8" id="tql-Kv-73N"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-aL-0qU">
@@ -111,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-119" y="-797"/>
         </scene>
-        <!--View Controller-->
+        <!--Notification Example View Controller-->
         <scene sceneID="pE8-HI-0gG">
             <objects>
-                <viewController id="dI0-Xk-12o" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationExampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dI0-Xk-12o" customClass="NotificationExampleViewController" customModule="GenericSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xn6-Ms-8VR"/>
                         <viewControllerLayoutGuide type="bottom" id="DFw-eh-m5y"/>
@@ -122,12 +131,62 @@
                     <view key="view" contentMode="scaleToFill" id="M1D-Qn-Dz1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEL-r8-aMa">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRx-rs-sTH">
+                                <rect key="frame" x="20" y="28" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.63529411759999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QdI-8R-HEV"/>
+                                    <constraint firstAttribute="width" constant="50" id="k5w-HP-xiy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdQ-0x-uck">
+                                <rect key="frame" x="305" y="28" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.81899797916412354" green="0.23033112287521362" blue="0.92161041498184204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AQ3-nH-nFj"/>
+                                    <constraint firstAttribute="width" constant="50" id="qGZ-PO-qld"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-KT-GEE">
+                                <rect key="frame" x="162" y="28" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.74465197319999998" green="0.30834046009999999" blue="0.1526247859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aSN-M4-tj1"/>
+                                    <constraint firstAttribute="width" constant="50" id="dEF-fp-2a7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TEL-r8-aMa" firstAttribute="leading" secondItem="M1D-Qn-Dz1" secondAttribute="leading" constant="20" id="3Qg-I1-jhc"/>
+                            <constraint firstItem="JRx-rs-sTH" firstAttribute="leading" secondItem="M1D-Qn-Dz1" secondAttribute="leadingMargin" constant="4" id="9mA-1g-usx"/>
+                            <constraint firstAttribute="trailing" secondItem="TEL-r8-aMa" secondAttribute="trailing" constant="20" id="V8d-ao-Hgc"/>
+                            <constraint firstItem="FdQ-0x-uck" firstAttribute="top" secondItem="Xn6-Ms-8VR" secondAttribute="bottom" constant="8" id="Vs2-rT-Idr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FdQ-0x-uck" secondAttribute="trailing" constant="4" id="Xdf-H5-dyH"/>
+                            <constraint firstItem="hRZ-KT-GEE" firstAttribute="centerX" secondItem="M1D-Qn-Dz1" secondAttribute="centerX" id="ae3-uJ-FD8"/>
+                            <constraint firstItem="hRZ-KT-GEE" firstAttribute="top" secondItem="Xn6-Ms-8VR" secondAttribute="bottom" constant="8" id="csE-SQ-etx"/>
+                            <constraint firstItem="JRx-rs-sTH" firstAttribute="top" secondItem="Xn6-Ms-8VR" secondAttribute="bottom" constant="8" id="e5H-EO-38B"/>
+                            <constraint firstItem="TEL-r8-aMa" firstAttribute="centerX" secondItem="M1D-Qn-Dz1" secondAttribute="centerX" id="kRl-IR-D65"/>
+                            <constraint firstItem="DFw-eh-m5y" firstAttribute="top" secondItem="TEL-r8-aMa" secondAttribute="bottom" constant="20" id="oak-ZB-qhh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottom" destination="oak-ZB-qhh" id="LdP-hy-5z8"/>
+                        <outlet property="first" destination="e5H-EO-38B" id="r7i-X5-IoQ"/>
+                        <outlet property="second" destination="csE-SQ-etx" id="oPl-t8-aSf"/>
+                        <outlet property="third" destination="Vs2-rT-Idr" id="9mH-HT-zum"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGV-j6-aT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="-442"/>
+            <point key="canvasLocation" x="628" y="-442.12893553223392"/>
         </scene>
         <!--Schedule Table View Controller-->
         <scene sceneID="mSD-IV-7G0">
@@ -183,10 +242,18 @@
                                         <color key="textColor" red="0.22352941179999999" green="0.2666666667" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZc-FY-heg">
+                                        <rect key="frame" x="335" y="34" width="22" height="22"/>
+                                        <connections>
+                                            <segue destination="dI0-Xk-12o" kind="show" id="HCi-qi-f8S"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jr8-bo-ffz" secondAttribute="trailing" constant="60" id="6sn-Zc-Xpp"/>
+                                    <constraint firstAttribute="bottom" secondItem="PZc-FY-heg" secondAttribute="bottom" constant="8" id="7uk-eX-qEu"/>
+                                    <constraint firstAttribute="trailing" secondItem="PZc-FY-heg" secondAttribute="trailing" constant="18" id="HUY-eV-Ifa"/>
                                     <constraint firstAttribute="bottom" secondItem="jr8-bo-ffz" secondAttribute="bottom" constant="8" id="O3g-1s-FSL"/>
                                     <constraint firstItem="jr8-bo-ffz" firstAttribute="leading" secondItem="3z6-qe-Mvz" secondAttribute="leading" constant="60" id="cwv-3a-z2R"/>
                                     <constraint firstAttribute="height" constant="64" id="rzi-fG-sm4"/>
@@ -213,7 +280,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8f-Ug-81o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="-136"/>
+            <point key="canvasLocation" x="-898" y="-130"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NTO-l4-ghi"/>
+    </inferredMetricsTieBreakers>
 </document>
