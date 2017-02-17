@@ -4,8 +4,17 @@ import Foundation
 import UIKit
 import PlaygroundSupport
 
+struct Movie {
+  let title: String
+  let rating: Int
+}
+
+let movies = [Movie(title: "The Big Lebowski", rating: 5), Movie(title: "Batman Begins", rating: 5), Movie(title: "True Romance", rating: 5), Movie(title: "The Green Mile", rating: 5)]
+let cellIdentifier = "MovieCell"
+
 final class MovieCell: UITableViewCell {
 
+  var magic: Bool?
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
   }
@@ -56,14 +65,6 @@ final class GenericTableViewController<T, C: UITableViewCell>: UITableViewContro
   }
 }
 
-struct Movie {
-  let title: String
-  let rating: Int
-}
-
-let movies = [Movie(title: "The Big Lebowski", rating: 5), Movie(title: "Batman Begins", rating: 5), Movie(title: "True Romance", rating: 5), Movie(title: "The Green Mile", rating: 5)]
-let cellIdentifier = "MovieCell"
-
 // TableView that supports Strings
 let tableView = GenericTableViewController<Movie, MovieCell>(data: movies, identifier: cellIdentifier)
 
@@ -71,6 +72,9 @@ tableView.configure =  { cell, movie in
   cell.textLabel?.text = movie.title
   cell.detailTextLabel?.text = "\(movie.rating) stars"
   cell.backgroundColor = .blue
+  cell.textLabel?.textColor = .white
+  cell.detailTextLabel?.textColor = .white
+  cell.magic = true
 }
 
 tableView.selection = { movie in

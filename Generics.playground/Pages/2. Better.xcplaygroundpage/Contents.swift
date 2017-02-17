@@ -53,6 +53,11 @@ tableView.configure =  { cell, movie in
   cell.detailTextLabel?.text = "\(movie.rating) stars"
 }
 
+tableView.configure = { cell, movie in
+  cell.textLabel?.text = movie.title
+  cell.contentView.backgroundColor = .purple
+}
+
 PlaygroundPage.current.liveView = tableView.view
 tableView.tableView.reloadData()
 
